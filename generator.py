@@ -1,7 +1,7 @@
 import re
 from docx import Document
 from markdown2 import markdown
-from config import OUTPUT_DIR
+from config import Config
 
 class Generator:
     def __init__(self, markdown_text):
@@ -29,7 +29,7 @@ class Generator:
         """Generates the DOCX file."""
         html_content = self.markdown_to_html()
         self.add_html_to_docx(html_content)
-        self.document.save(f"{OUTPUT_DIR}/{filename}")
+        self.document.save(f"{Config.OUTPUT_DIR}/{filename}")
         return f"Document '{filename}' has been created successfully."
 
 # Example usage:

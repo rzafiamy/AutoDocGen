@@ -16,7 +16,7 @@ class OpenAILLM(LLMInterface):
             api_key=api_key,
         )
 
-    def generate_documentation(self, code, detail_level, model="davinci-codex", max_tokens=1500):
+    def generate_documentation(self, code, detail_level, model="gpt-3.5-turbo-0125", max_tokens=4096):
         response = self.client.chat.completions.create(
             model=model,
             messages=[
@@ -31,7 +31,7 @@ class OpenAILLM(LLMInterface):
             ],
             max_tokens=max_tokens,
         )
-        return response.choices[0].text
+        return response.choices[0].message.content
 
 #-------------------------------------------
 # Implement the LLM classes for GROQ
