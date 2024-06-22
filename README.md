@@ -4,6 +4,10 @@
 
 a powerful Python application designed to streamline code documentation. Leveraging multiple API service providers such as Groq, Mistral, OpenAI, Cohere, and Google, CodeDocAI automatically generates comprehensive and concise documentation for any codebase. With just a few clicks, CodeDocAI produces detailed explanations and generates professional-grade PDF or DOCX files, making it easier than ever to understand and share your code.
 
+### Preview
+
+![Generated docs](docs/screen.jpg)
+
 ## Table of Contents
 
 - [Installation](#installation)
@@ -21,13 +25,13 @@ git clone https://github.com/rzafiamy/AutoDocGen.git
 cd AutoDocGen
 ```
 
-# Install dependencies
+## Install dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-# Usage
+## Usage
 
 The `manager.py` script is used to interact with different API providers and document files located in a specified folder. Below is how you can use this script:
 
@@ -65,6 +69,9 @@ python manager.py --provider groq --code another/path --token your_token_here --
 python manager.py --provider mistral --code some/path --num_files 5 --token your_token_here
 ```
 
-# License
+## Contributing
+
+
+## License
 
 Distribute under the Apache 2.0 License. See LICENSE for more information.
